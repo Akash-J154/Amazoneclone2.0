@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import {UseContent} from './UseContent';
+import { useState } from 'react';
 const Header = () => {
-   const {cartvalue}=useContext(UseContent)
+   const {cartvalue,products,searchbar,setsearchbar}=useContext(UseContent)
+  
+   const handlesearch=()=>{
+
+   }
   return (
     <>
     <div className='flex flex-col sm:flex-row bg-[#131921] w-screen h-28 relative '>
@@ -16,10 +21,9 @@ const Header = () => {
         </div>
         <div className='w-screen h-16 sm:w-[100%] h-28 font-semibold flex flex-row items-center' >
         
-        <input type={"text"} className='ml-4 w-80 mt-3 text-black  sm:mt-10 sm:pt-3 lg:w-2/3 '>
-         
+        <input type={"text"} value={searchbar} onChange={(e)=>{setsearchbar(e.target.value)}} className='ml-4 w-80 mt-3 text-black  sm:mt-10 sm:pt-3 lg:w-2/3 '> 
         </input>
-        <button className='ml-14'><img src='searchicon.png' alt='' className='w-6 absolute left-[78%] top-[55%] md:left-[56%]  top-[36%] lg:left-[70%]'/></button>
+        <button className='ml-14'><img src='searchicon.png' alt='' className=' w-6 absolute left-[78%] top-[55%] md:left-[56%]  top-[36%] lg:left-[71%] lg:bg-[#f4d077] w-9 lg:top-[31%]' onClick={handlesearch}/></button>
         <div className='relative  h-full '>
 
           <button className="invisible sm:visible peer  bg-[#131921]  hover:bg-[#131921] hover:border-solid hover:border-2  text-white sm:w-20 text-xs md:mt-12 " >Hello,sign in <br></br> Account & Lists</button>

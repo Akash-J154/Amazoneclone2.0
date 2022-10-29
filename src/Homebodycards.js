@@ -29,14 +29,14 @@ const Homebodycards = ({id,text,rating,img,price}) => {
   return (  
     
     <div>
-      <Card  className=' border-solid border-2 border-white bg-white text-justify justify-center pl-12'>
+      <Card  className=' border-solid border-2 border-white bg-white text-justify justify-center pl-12 mt-2 h-96'>
       <Card.Body>
         <Card.Text>
          {text}
         </Card.Text>
     <Rating name="read-only" value={rating} readOnly />
-        <Card.Img variant="top" src={img} /><br></br>
-        <Card.Text>{price}</Card.Text>
+        <Card.Img variant="top" src={img} className='h-56' /><br></br>
+        <Card.Text className='font-semibold'>${price}</Card.Text>
         <Button variant="warning" style={{background:"#fcb603",width:"68%"}} onClick={handleclick} >Add to cart</Button>
       </Card.Body>
     </Card>

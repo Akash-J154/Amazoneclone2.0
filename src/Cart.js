@@ -18,7 +18,7 @@ const Cart = () => {
     console.log('entered sigin')
     }
     else{
-    <Checkout/>
+    Navigate('/Cart/Checkout')
     console.log('inside checkout')
     }
   }
@@ -47,7 +47,7 @@ const Cart = () => {
           
         })
         :
-        <p>No items</p>
+        <p className='bg-white'>No items</p>
       }
        
     </div>

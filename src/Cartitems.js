@@ -15,10 +15,7 @@ const Cartitems = ({id,text,rating,img,price}) => {
         setitems((prev_state)=>{
           let temp = prev_state;
           temp.splice(index,1);
-          return temp;
-
-
-        })
+          return temp; })
         setprice(totalprice-price)
       setval((val)=>{
         if (val>0)
@@ -28,15 +25,6 @@ const Cartitems = ({id,text,rating,img,price}) => {
      }
 
     }
-
- 
-    // useEffect(()=>{
-    //   console.log('useeffect reached')
-    //  cartitems.map((items,index)=>{
-    //   return <Cartitems id={items.id} text={items.text} rating={items.rating} img={items.img}/>
-    //  })
-    // }
-    // ,[make]);
  
   return (
     <div>

@@ -64,9 +64,9 @@ const Signin = () => {
   }
   return (
     state?(
-    <div>
+    <div >
       <img src='/amazon white logo.png' alt='' className='w-32 ml-[33%] sm:ml-[44%] mt-[3%]'/>
-       <Form className='border-2 absolute w-72 ml-10 sm:top-[20%] sm:left-[40%] sm:w-72 h-80 pl-8' onSubmit={handlesubmit}>
+       <Form className='bg-white border-2 absolute w-72 ml-10 sm:top-[20%] sm:left-[40%] sm:w-72 h-80 pl-8' onSubmit={handlesubmit}>
         <Form.Text className='text-lg font-semibold'>Sign In</Form.Text><br></br><br></br>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label><br></br>
