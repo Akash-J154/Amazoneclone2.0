@@ -7,14 +7,6 @@ import {UseContent} from './UseContent'
 const Homebodycards = ({id,text,rating,img,price}) => {
   let {cartvalue,setval,setitems,cartitems,setprice,totalprice}=useContext(UseContent)
   const handleclick=async()=>{
-   
-    //   // setitems(prevState=>{
-    //   //   let State=prevState;
-    //   //   State.push()
-    //   //   return  State
-    //   // })
-  
-
     let index =await  cartitems.findIndex((item)=> id===item.id);
     console.log(index)
 
@@ -28,8 +20,8 @@ const Homebodycards = ({id,text,rating,img,price}) => {
   }
   return (  
     
-    <div>
-      <Card  className=' border-solid border-2 border-white bg-white text-justify justify-center pl-12 mt-2 h-96'>
+    <div >
+      <Card  className='w-60 border-solid border-2 border-white bg-white text-justify justify-between pl-7 mt-2 h-96  '>
       <Card.Body>
         <Card.Text>
          {text}

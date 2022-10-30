@@ -51,14 +51,6 @@ const Signin = () => {
 
   }
   const handlecreateaccount=(e)=>{
-    // e.preventDefault()
-    // getAuth.createUserWithEmailAndPassword(email,password)
-    // .then((auth)=>{
-    //   console.log(auth)
-    // })
-    // .catch((error)=>{
-    //   alert(error.message)
-    // })
    <Signup/>
 
   }

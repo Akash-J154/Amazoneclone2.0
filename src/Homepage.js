@@ -3,7 +3,7 @@ import Header from './Header'
 import HomeBody  from './HomeBody'
 const Homepage = () => {
   return (
-    <div className='bg-gray-200' >
+    <div className='bg-gray-200 overflow-hidden' >
      <Header/>
      <HomeBody/>
      </div>

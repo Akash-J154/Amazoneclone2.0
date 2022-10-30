@@ -12,8 +12,8 @@ const Header = () => {
    }
   return (
     <>
-    <div className='flex flex-col sm:flex-row bg-[#131921] w-screen h-28 relative '>
-        <div className='w-screen h-12  sm:w-[20%] md:h-28 md:28 '>
+    <div className='flex flex-col  sm:flex-row bg-[#131921] w-screen h-28 relative '>
+        <div className='w-full h-12  sm:w-[20%] md:h-28 md:28 '>
           <a href='/'><img src='/Amazon Logo.png' alt='' className='ml-1 mt-0 w-32 h-12 sm:mt-8 '/></a>
           <Link to='/Cart' className='text-white '><ShoppingBasketIcon className='visible absolute right-12 top-5 sm:invisible lg:ml-56'/></Link>
           <Link to='/Signin' className='text-white absolute top-5 right-40 visible sm:invisible' >Sign in</Link> 
@@ -29,12 +29,12 @@ const Header = () => {
           <button className="invisible sm:visible peer  bg-[#131921]  hover:bg-[#131921] hover:border-solid hover:border-2  text-white sm:w-20 text-xs md:mt-12 " >Hello,sign in <br></br> Account & Lists</button>
         
           <div className="hidden peer-hover:flex hover:flex
-          w-[200px] h-[900px] z-999 absolute top-[140%]
-          flex-col bg-white drop-shadow-lg ">
+          w-[200px] h-[200px] z-[999] absolute top-[140%]
+          flex-col bg-white drop-shadow-lg pl-14 pt-5">
             <Link to='/Signin' >Sign in</Link> 
           </div>
         </div>
-        <button className="invisible sm:visible  bg-[#131921]  hover:bg-[#131921] hover:border-solid hover:border-2 text-white sm:-mr-32 sm:w-20 md: w-32 md: h-9 text-xs  lg:w-24 lg:h-12 lg:ml-12 lg:mt-16" >Returns <br></br>& Orders</button>
+        <button className="invisible sm:visible  bg-[#131921]  hover:bg-[#131921] hover:border-solid hover:border-2 text-white sm:-mr-32 sm:w-20 md: w-32 md: h-9 text-xs md:mt-16  lg:w-24 lg:h-12 lg:ml-12 lg:mt-16" >Returns <br></br>& Orders</button>
        <Link to='/Cart' className='text-white '><ShoppingBasketIcon className='invisible md:visible mb-12 absolute right-12 md:top-14  lg:ml-56'/></Link>
        <div className=' ml-60 invisible text-white sm:visible absolute  sm:right-9 sm:bottom-8'>{cartvalue}</div>
         
