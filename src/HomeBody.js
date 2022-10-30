@@ -5,17 +5,14 @@ import { UseContent } from './UseContent'
 export const HomeBody = () => {
   const {products,searchbar}=useContext(UseContent)
   let indo=1
-   function time() {
-    indo=products.findIndex((items,pp)=> (items.text.localeCompare(searchbar)))
-    console.log(indo);
-  }
+  let result=[]
   return (
     searchbar?(
       <div className='relative ' >
         <img alt='' src='/amzonfrontimage.jpg' className='w-screen z-[0]  '/> 
         <div className='bg-gray-200'>
         <div 
-        className='flex flex-col md:flex-wrap absolute top-[55%] gap-10 '>
+        className='grid grid-cols-1 absolute top-[55%] gap-10 md:grid-cols-3 lg:grid-cols-5'>
           {
           products.filter((result)=>{if(result?.text?.includes(searchbar))
              return result}).map((item,index)=>{return <Homebodycards key={index} id={item.id} text={item.text} rating={item.rating} img={item.img} price={item.price} />})
@@ -24,7 +21,7 @@ export const HomeBody = () => {
         </div>
     </div>
     ):(
-    <div className='' >
+    <div  >
         <img alt='' src='/amzonfrontimage.jpg' className='w-screen z-[0] h-72 lg:h-auto'/> 
         <div className='bg-gray-200 flex flex-col items-center'>
         <div 
