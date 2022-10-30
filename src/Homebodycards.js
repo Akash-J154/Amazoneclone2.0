@@ -4,19 +4,23 @@ import Button from 'react-bootstrap/Button';
 import Rating from '@mui/material/Rating';
 import {useContext} from 'react'
 import {UseContent} from './UseContent'
-const Homebodycards = ({id,text,rating,img,price}) => {
-  let {cartvalue,setval,setitems,cartitems,setprice,totalprice}=useContext(UseContent)
-  const handleclick=async()=>{
-    let index =await  cartitems.findIndex((item)=> id===item.id);
-    console.log(index)
+import {  useNavigate } from 'react-router-dom';
 
-    if (index===-1)
-    {
-      setval(cartvalue+1)
-      setitems([...cartitems,{id,text,rating,img,price}])  
-     setprice(totalprice+price)
-   
-    }
+const Homebodycards = ({id,text,rating,img,price}) => {
+  const navigate=useNavigate()
+  let {cartvalue,setval,setitems,cartitems,setprice,totalprice,showcart}=useContext(UseContent)
+  const handleclick=async()=>{
+    let index;
+    showcart? (  
+   index =await cartitems.findIndex((item)=> id===item.id)
+     ( index!==-1 &&
+      setval(cartvalue+1),
+      console.log("inside index"),
+      setitems([...cartitems,{id,text,rating,img,price}]) , 
+     setprice(totalprice+price) )
+    ) :( 
+      navigate('/Signin')
+      )
   }
   return (  
     

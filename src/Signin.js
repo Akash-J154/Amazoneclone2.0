@@ -6,7 +6,6 @@ import { useState } from 'react';
 import axios from 'axios'
 import Homepage from './Homepage';
 import Signup from './Signup';
-// import { getAuth } from './firebase';
 import { useRef } from 'react';
 import { UseContent } from './UseContent';
 const Signin = () => {
@@ -17,7 +16,7 @@ const Signin = () => {
   const emailref=useRef()
   const [state,setstate]=useState(true)
   const Navigate=useNavigate()
-  const {setpersonalinfo,personalinfo}=useContext(UseContent)
+  const {setpersonalinfo,personalinfo,showcart,setvalue}=useContext(UseContent)
   useEffect(()=>{
     seterrmsg('')
   },[email,password])
@@ -36,7 +35,10 @@ const Signin = () => {
       setemail('')
       setpassword('')
       console.log(personalinfo)
+      console.log("in sign in")
       setstate(false)
+      setvalue(true)
+      console.log(showcart)
       Navigate("/")
     })
     .catch(function (error) {

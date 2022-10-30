@@ -8,8 +8,8 @@ export const HomeBody = () => {
   let result=[]
   return (
     searchbar?(
-      <div className='relative ' >
-        <img alt='' src='/amzonfrontimage.jpg' className='w-screen z-[0]  '/> 
+      <div className='relative'  >
+        {/* <img alt='' src='/amzonfrontimage.jpg' className='w-screen z-[0]  ' />  */}
         <div className='bg-gray-200'>
         <div 
         className='grid grid-cols-1 absolute top-[55%] gap-10 md:grid-cols-3 lg:grid-cols-5'>
@@ -21,8 +21,8 @@ export const HomeBody = () => {
         </div>
     </div>
     ):(
-    <div  >
-        <img alt='' src='/amzonfrontimage.jpg' className='w-screen z-[0] h-72 lg:h-auto'/> 
+    <div style={{position:"relative"}} className='ba' >
+          <img alt='' src='/amzonfrontimage.jpg' className='w-screen z-[0] h-72 lg:h-auto from-pink-700 to-white'/>   
         <div className='bg-gray-200 flex flex-col items-center'>
         <div 
         className=' grid grid-cols-1 absolute top-[35%] lg:top-[55%]  gap-10 items-center md:grid-cols-3 lg:grid-cols-5  '>
