@@ -7,6 +7,7 @@ const [cartvalue,setval]=useState(0)
 const [cartitems,setitems]=useState([])
 const [totalprice,setprice]=useState(0)
 const [searchbar,setsearchbar]=useState('')
+const [name,setname]=useState('')
 const [personalinfo,setpersonalinfo]=useState({})
 const [showcart,setvalue]=useState(false)
 let products=[{id:0, text:"phone",rating:4,img:"/phone.jpg",price:
@@ -22,7 +23,7 @@ let products=[{id:0, text:"phone",rating:4,img:"/phone.jpg",price:
 1124},{id:10, text:"phone",rating:4,img:"/phone.jpg",price:
 12124}]
 return(
-<UseContent.Provider value = {{cartvalue,setval,cartitems,setitems,totalprice,setprice,personalinfo,setpersonalinfo,products,searchbar,setsearchbar,showcart,setvalue}}>
+<UseContent.Provider value = {{cartvalue,setval,cartitems,setitems,totalprice,setprice,personalinfo,setpersonalinfo,products,searchbar,setsearchbar,showcart,setvalue,name,setname}}>
         {children}
     </UseContent.Provider>
 )

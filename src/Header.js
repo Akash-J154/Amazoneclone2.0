@@ -5,7 +5,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import {UseContent} from './UseContent';
 import { useState } from 'react';
 const Header = () => {
-   const {cartvalue,searchbar,setsearchbar,showcart}=useContext(UseContent)
+   const {cartvalue,searchbar,setsearchbar,showcart,personalinfo}=useContext(UseContent)
   
    const handlesearch=()=>{
 
@@ -31,7 +31,8 @@ const Header = () => {
         <button className='ml-14'><img src='searchicon.png' alt='' className=' w-6 absolute left-[46%] top-[68%] md:left-[56%]  top-[36%] lg:left-[71%] lg:bg-[#f4d077] lg:w-9 lg:top-[31%]' onClick={handlesearch}/></button>
         <div className='relative  h-full '>
 
-          <button className="invisible sm:visible peer  bg-[#131921]  hover:bg-[#131921] hover:border-solid hover:border-2  text-white sm:w-20 text-xs md:mt-12 " >Hello,sign in <br></br> Account & Lists</button>
+        { !showcart? <button className="invisible sm:visible peer  bg-[#131921]  hover:bg-[#131921] hover:border-solid hover:border-2  text-white sm:w-20 text-xs md:mt-12 " >Hello,sign in <br></br> Account & Lists</button>:
+       <p className='text-white text-xs mt-12'>HI {personalinfo.email}</p> }
         
           <div className="hidden peer-hover:flex hover:flex
           w-[200px] h-[200px] z-[999] absolute top-[140%]
