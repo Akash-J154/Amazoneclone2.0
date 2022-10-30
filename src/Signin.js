@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios'
 import Homepage from './Homepage';
@@ -16,6 +16,7 @@ const Signin = () => {
   const errref=useRef()
   const emailref=useRef()
   const [state,setstate]=useState(true)
+  const Navigate=useNavigate()
   const {setpersonalinfo,personalinfo}=useContext(UseContent)
   useEffect(()=>{
     seterrmsg('')
@@ -36,6 +37,7 @@ const Signin = () => {
       setpassword('')
       console.log(personalinfo)
       setstate(false)
+      Navigate("/")
     })
     .catch(function (error) {
       if(error.response.status===400)
